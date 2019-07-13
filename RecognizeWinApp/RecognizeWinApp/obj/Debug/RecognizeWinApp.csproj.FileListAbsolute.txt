@@ -1,0 +1,10 @@
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\RecognizeWinApp.exe.config
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\RecognizeWinApp.exe
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\RecognizeWinApp.pdb
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.csprojAssemblyReference.cache
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.Form1.resources
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.Properties.Resources.resources
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.csproj.GenerateResource.cache
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.csproj.CoreCompileInputs.cache
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.exe
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.pdb
