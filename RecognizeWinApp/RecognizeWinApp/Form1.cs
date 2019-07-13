@@ -17,8 +17,9 @@ namespace RecognizeWinApp
         private Pen pen;
         private int x, y;
         private bool moving;
-        
 
+        //data 
+        private int[,] dataMatrix;
 
         public Form1()
         {
@@ -29,7 +30,23 @@ namespace RecognizeWinApp
             moving = false;
             pen = new Pen(Color.Black, 5);
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+
+            dataMatrix = new int[20, 30];
+            fillZeros(dataMatrix, 20, 30);
         }
+
+        private void fillZeros(int[,] matrix, int cols, int rows)
+        {
+            for(int i = 0; i < cols; i++)
+            {
+                for(int j = 0; j < rows; j++)
+                {
+                    matrix[i, j] = 0;
+                }
+            }
+        }
+
+
 
         private void pictureBox49_Click(object sender, EventArgs e)
         {
@@ -63,14 +80,39 @@ namespace RecognizeWinApp
 
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
-            if(moving && x != -1 && y != -1)
+            if (moving && x != -1 && y != -1)
             {
-                g.DrawLine(pen,new Point(x, y), e.Location);
+                g.DrawLine(pen, new Point(x, y), e.Location);
                 x = e.X;
-                y = e.Y;
+                y = e.Y;               
+                dataMatrix[(int)(e.X / 20), (int)(e.Y / 20)] = 1;    
             }
         }
 
-        
-    }
+        private void button1_Click(object sender, EventArgs e) //   transform button
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 30; j++)
+                {
+                    Console.Write(dataMatrix[i, j] + " ");
+                }
+                Console.Write("\n");
+            }
+        }
+
+
+        private void transformToMatrix()
+        {
+
+        }
+
+
+        public void getDataMatrix()
+        {
+
+        }
+
+
+    }   
 }
