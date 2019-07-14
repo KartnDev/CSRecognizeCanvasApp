@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace RecognizeWinApp
 {
-    class Recognize
+    public class KNNClassifier //KNearestNeighbor
     {
-        Recognize()
-        {
-
-        }
-        public void pushData()
-        {
-
-        }
         
     }
 }

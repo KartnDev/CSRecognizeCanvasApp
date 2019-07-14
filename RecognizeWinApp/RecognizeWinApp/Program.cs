@@ -14,9 +14,11 @@ namespace RecognizeWinApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 form = new Form1(20, 30);
+            
+            Application.EnableVisualStyles();          
+            Application.Run(form);
+           
         }
     }
 }

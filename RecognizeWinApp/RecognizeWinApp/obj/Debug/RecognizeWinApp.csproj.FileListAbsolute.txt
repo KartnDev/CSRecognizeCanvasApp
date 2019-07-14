@@ -8,3 +8,14 @@ C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeW
 C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.csproj.CoreCompileInputs.cache
 C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.exe
 C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.pdb
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.Charsets.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.Core.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.Security.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.Text.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.Util.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.OpenJDK.XML.API.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\IKVM.Runtime.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\libsvm.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\bin\Debug\LIBSVM.NET.dll
+C:\Users\dmutp\source\repos\RecognizeWinApp\RecognizeWinApp\obj\Debug\RecognizeWinApp.csproj.CopyComplete

@@ -7,32 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using libsvm;
 
 namespace RecognizeWinApp
 {
     public partial class Form1 : Form
     {
-
+       
         private Graphics g;
         private Pen pen;
         private int x, y;
         private bool moving;
-
+        private int HEIGHT, WIDTH; 
         //data 
         private int[,] dataMatrix;
+        private bool analisysValidation = false;
 
-        public Form1()
+
+        public Form1(int height,int width)
         {
             InitializeComponent();
             g = panel3.CreateGraphics();
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;            
             x = y = -1;
             moving = false;
             pen = new Pen(Color.Black, 5);
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
-            dataMatrix = new int[20, 30];
-            fillZeros(dataMatrix, 20, 30);
+            this.HEIGHT = height; this.WIDTH = width;
+            dataMatrix = new int[height, width];
+            fillZeros(dataMatrix, height, width);
         }
 
         private void fillZeros(int[,] matrix, int cols, int rows)
@@ -46,6 +50,10 @@ namespace RecognizeWinApp
             }
         }
 
+        public void GetAnalisysValidation()
+        {
+            
+        }
 
 
         private void pictureBox49_Click(object sender, EventArgs e)
@@ -84,33 +92,39 @@ namespace RecognizeWinApp
             {
                 g.DrawLine(pen, new Point(x, y), e.Location);
                 x = e.X;
-                y = e.Y;               
-                dataMatrix[(int)(e.X / 20), (int)(e.Y / 20)] = 1;    
+                y = e.Y;
+                dataMatrix[(int)(e.Y / 20), (int)(e.X / 20)] = 1;               
+            
             }
         }
 
         private void button1_Click(object sender, EventArgs e) //   transform button
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < this.HEIGHT; i++)
             {
-                for (int j = 0; j < 30; j++)
+                for (int j = 0; j < this.WIDTH; j++)
                 {
                     Console.Write(dataMatrix[i, j] + " ");
                 }
                 Console.Write("\n");
             }
+
+            analisysValidation = true;
+            transformToMatrix();
         }
 
 
         private void transformToMatrix()
         {
+            g.Clear(Color.WhiteSmoke);
 
+            
         }
 
 
-        public void getDataMatrix()
+        public int[,] getDataMatrix()
         {
-
+            return dataMatrix;
         }
 
 
