@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -117,8 +118,25 @@ namespace RecognizeWinApp
         private void transformToMatrix()
         {
             g.Clear(Color.WhiteSmoke);
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine("", "DataSet.txt"), true))
+            {
+                for (int i = 0; i < this.HEIGHT; i++)
+                {
+                    for (int j = 0; j < this.WIDTH; j++)
+                    {
+                        outputFile.WriteLine(dataMatrix[i, j]);
+                    }
+                }
+            }
 
-            
+            kNN examplekNN = kNN.initialiseKNN(3, "DataSet.txt", true);
+
+            List<double> instance2Classify = new List<double> { 1.0 };
+            string result = examplekNN.Classify(instance2Classify);
+            Console.WriteLine("This instance is classified as: {0}", result);
+            Console.ReadLine();
+
+
         }
 
 
