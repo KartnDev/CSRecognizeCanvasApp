@@ -129,12 +129,7 @@ namespace RecognizeWinApp
                 }
             }
 
-            kNN examplekNN = kNN.initialiseKNN(3, "DataSet.txt", true);
-
-            List<double> instance2Classify = new List<double> { 1.0 };
-            string result = examplekNN.Classify(instance2Classify);
-            Console.WriteLine("This instance is classified as: {0}", result);
-            Console.ReadLine();
+            
 
 
         }
