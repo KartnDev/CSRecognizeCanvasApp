@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.ConsoleApp\\RecognizeWinAppML.ConsoleApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.ConsoleApp\\RecognizeWinAppML.ConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.ConsoleApp\\RecognizeWinAppML.ConsoleApp.csproj",
+        "projectName": "RecognizeWinAppML.ConsoleApp",
+        "projectPath": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.ConsoleApp\\RecognizeWinAppML.ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\dmutp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.ConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dmutp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\RecognizeWinAppML.Model.csproj": {
+                "projectPath": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\RecognizeWinAppML.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.ML.LightGBM": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\RecognizeWinAppML.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\RecognizeWinAppML.Model.csproj",
+        "projectName": "RecognizeWinAppML.Model",
+        "projectPath": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\RecognizeWinAppML.Model.csproj",
+        "packagesPath": "C:\\Users\\dmutp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dmutp\\source\\repos\\RecognizeWinApp\\RecognizeWinAppML.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dmutp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.ML.LightGBM": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
