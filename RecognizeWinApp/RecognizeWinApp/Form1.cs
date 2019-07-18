@@ -22,11 +22,10 @@ namespace RecognizeWinApp
         private int HEIGHT, WIDTH; 
         //data 
         private int[,] dataMatrix;
-        private bool analisysValidation = false;
-
-
+        private Queue<string> data;
         public Form1(int height,int width)
         {
+            
             InitializeComponent();
             g = panel3.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;            
@@ -34,10 +33,11 @@ namespace RecognizeWinApp
             moving = false;
             pen = new Pen(Color.Black, 5);
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-
             this.HEIGHT = height; this.WIDTH = width;
             dataMatrix = new int[height, width];
             fillZeros(dataMatrix, height, width);
+
+            data = new Queue<string>();
         }
 
         private void fillZeros(int[,] matrix, int cols, int rows)
@@ -101,38 +101,76 @@ namespace RecognizeWinApp
 
         private void button1_Click(object sender, EventArgs e) //   transform button
         {
+            string temp = "";
             for (int i = 0; i < this.HEIGHT; i++)
             {
                 for (int j = 0; j < this.WIDTH; j++)
                 {
-                    Console.Write(dataMatrix[i, j] + " ");
+                    Console.Write(dataMatrix[i, j]);
+                    temp += dataMatrix[i, j];
                 }
                 Console.Write("\n");
-            }
 
-            analisysValidation = true;
+            }
+            data.Enqueue(temp);
+            temp = "";
+
+            // Open the file to read from.
+
+            
+
             transformToMatrix();
         }
 
+        private void Button2_Click(object sender, EventArgs e) //   train
+        {
+            using (StreamWriter sw = File.AppendText("trainP.csv"))
+            {
+                foreach (string item in data)
+                {
+                    sw.WriteLine(item + Environment.NewLine);
+                }
+
+            }
+
+            Console.WriteLine("\n\n\n\n\n");
+            using (StreamReader sr = File.OpenText("trainP.csv"))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e) // compute
+        {
+
+        }
 
         private void transformToMatrix()
         {
             g.Clear(Color.WhiteSmoke);
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine("", "DataSet.txt"), true))
+            for (int i = 0; i < this.HEIGHT; i++)
             {
-                for (int i = 0; i < this.HEIGHT; i++)
-                {
-                    for (int j = 0; j < this.WIDTH; j++)
-                    {
-                        outputFile.WriteLine(dataMatrix[i, j]);
-                    }
+                for (int j = 0; j < this.WIDTH; j++)
+                {     
+                    
                 }
             }
-
-            
-
-
         }
+
+
+        private void WriteMatrixFile()
+        {
+
+
+
+
+            //System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\WriteLines.txt", csv);
+        }
+
 
 
         public int[,] getDataMatrix()
