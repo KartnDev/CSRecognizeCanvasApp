@@ -36,7 +36,7 @@ namespace RecognizeWinApp
             this.HEIGHT = height; this.WIDTH = width;
             dataMatrix = new int[height, width];
             fillZeros(dataMatrix, height, width);
-
+            WriteLabels();
             data = new Queue<string>();
         }
 
@@ -49,11 +49,6 @@ namespace RecognizeWinApp
                     matrix[i, j] = 0;
                 }
             }
-        }
-
-        public void GetAnalisysValidation()
-        {
-            
         }
 
 
@@ -122,26 +117,55 @@ namespace RecognizeWinApp
             transformToMatrix();
         }
 
-        private void Button2_Click(object sender, EventArgs e) //   train
+
+
+        private void WriteLabels()
         {
-            using (StreamWriter sw = File.AppendText("trainP.csv"))
-            {
-                foreach (string item in data)
-                {
-                    sw.WriteLine(item + Environment.NewLine);
-                }
-
-            }
-
-            Console.WriteLine("\n\n\n\n\n");
             using (StreamReader sr = File.OpenText("trainP.csv"))
             {
-                string s = "";
-                while ((s = sr.ReadLine()) != null)
+                if (sr.ReadLine() == null)
                 {
-                    Console.WriteLine(s);
+                    sr.Close();
+                    using (StreamWriter sw = File.AppendText("trainP.csv"))
+                    {
+                        string LabelStr = "label,";
+                        for (int i = 0; i < this.HEIGHT * this.WIDTH - 1; i++)
+                        {
+                            LabelStr += "pixel" + i + ",";
+                        }
+                        LabelStr += "pixel" + (this.HEIGHT * this.WIDTH - 1);
+                        sw.WriteLine(LabelStr);
+                    }
                 }
             }
+        }
+
+
+
+
+        private void Button2_Click(object sender, EventArgs e) //   train
+        {
+
+             
+                using (StreamWriter sw = File.AppendText("trainP.csv"))
+                {
+                    foreach (string item in data)
+                    {
+                        sw.WriteLine(item + Environment.NewLine);
+                    }
+
+                }
+
+                Console.WriteLine("\n\n\n\n\n");
+                using (StreamReader sr = File.OpenText("trainP.csv"))
+                {
+                    string s = "";
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                    }
+                }
+            
         }
 
         private void Button3_Click(object sender, EventArgs e) // compute

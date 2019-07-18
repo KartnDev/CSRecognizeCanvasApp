@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.pictureBox53 = new System.Windows.Forms.PictureBox();
             this.pictureBox52 = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
@@ -59,6 +59,13 @@
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(507, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(81, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // button3
             // 
@@ -86,7 +93,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Transform";
+            this.button1.Text = "Push to data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -130,13 +137,6 @@
             this.pictureBox49.TabIndex = 0;
             this.pictureBox49.TabStop = false;
             this.pictureBox49.Click += new System.EventHandler(this.pictureBox49_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(507, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(81, 20);
-            this.textBox1.TabIndex = 4;
             // 
             // Form1
             // 
