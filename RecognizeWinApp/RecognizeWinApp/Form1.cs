@@ -99,14 +99,18 @@ namespace RecognizeWinApp
             string temp = "";
             for (int i = 0; i < this.HEIGHT; i++)
             {
-                for (int j = 0; j < this.WIDTH; j++)
+                for (int j = 0; j < this.WIDTH - 1; j++)
                 {
                     Console.Write(dataMatrix[i, j]);
-                    temp += dataMatrix[i, j];
+                    temp += dataMatrix[i, j] + ",";
                 }
                 Console.Write("\n");
 
             }
+            temp += dataMatrix[this.HEIGHT-1, this.WIDTH - 2];
+
+
+
             data.Enqueue(temp);
             temp = "";
 
@@ -129,7 +133,7 @@ namespace RecognizeWinApp
                     using (StreamWriter sw = File.AppendText("trainP.csv"))
                     {
                         string LabelStr = "label,";
-                        for (int i = 0; i < this.HEIGHT * this.WIDTH - 1; i++)
+                        for (int i = 0; i < this.HEIGHT * this.WIDTH - 21; i++)
                         {
                             LabelStr += "pixel" + i + ",";
                         }
@@ -145,13 +149,13 @@ namespace RecognizeWinApp
 
         private void Button2_Click(object sender, EventArgs e) //   train
         {
-
-             
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
                 using (StreamWriter sw = File.AppendText("trainP.csv"))
                 {
                     foreach (string item in data)
                     {
-                        sw.WriteLine(item + Environment.NewLine);
+                        sw.WriteLine(textBox1.Text + "," + item + Environment.NewLine);
                     }
 
                 }
@@ -165,7 +169,7 @@ namespace RecognizeWinApp
                         Console.WriteLine(s);
                     }
                 }
-            
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e) // compute
